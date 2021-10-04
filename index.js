@@ -1,54 +1,53 @@
 // 01 - Alphabet
 
-// function sortLetters(text) {
+function sortLetters(text) {
     
-//     return text.split('').sort().join('');
-// };
+    return text.split('').sort().join('');
+};
 
-// var text2 = sortLetters("konexio")
-// console.log(text2)
-
-
-function sortLetters2(str){
-    var arr = str.split('');
-    var sorted = arr.sort();
-    return sorted.join('');
-}
-var str2 = sortLetters2("konexio")
-console.log(str2)
+var text2 = sortLetters("konexio")
+console.log(text2)
 
 
 
 //   //02 - XOXO
 
-//     function countEach(text) {   
+function countEach(x) {
 
-//         if ( text.includes("o") && text.includes("x") ) {
-//          return true
-//         } else if ( x = o ) { 
-//             return true 
-//           }  else {
-//           return false
-//         }       
-//     } 
-
-//     countText = countEach("xxooo")
-//     console.log(countText)
-
-    function sameLetter(text) {
-        var text2 = text.split("")
-        var letterX = "x"
-        var letterO = "o"
-        console.log(text2)
-
-        if ( text2.IndexOf(letterX) !== text2.IndexOf(letterO)) {
-            return false 
-        } else {
-            return true 
-        }
-
-
+  var countX = 0
+  var countO = 0
+  for (var i = 0; i < x.length; i++) {
+    if (x[i] === "x") {
+      countX++
+      // console.log(countX)
+    } else if (x[i] === "o") {
+      countO++
+      // console.log(countO)
     }
+  } if (countX === countO) {
+    return true
+  } else {
+    return false
+  }
+}
 
-    console.log(sameLetter("xxxooo"))
+var blabla = countEach("xoxo")
+console.log(blabla)
 
+// palindrome
+
+function checkpal(string) {
+  var palindrome = string.split("")
+  var palindrome1 = palindrome.reverse()
+  var palindrome2 = palindrome1.join("")
+  if (palindrome === "") {
+  } else if (string === palindrome2) {
+    return "Palindrome !"
+  } else {
+    return `${palindrome2} n'est pas un palindrome`
+  }
+
+
+}
+var pal = checkpal("racecar")
+console.log(pal)
