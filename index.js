@@ -38,10 +38,10 @@ console.log(blabla)
 
 function checkpal(string) {
   var palindrome = string.split("")
-  var palindrome1 = palindrome.reverse()
-  var palindrome2 = palindrome1.join("")
+  var palindromeOne = palindrome.reverse()
+  var palindromeTwo = palindromeOne.join("")
   if (palindrome === "") {
-  } else if (string === palindrome2) {
+  } else if (string === palindromeTwo) {
     return "Palindrome !"
   } else {
     return `${palindrome2} n'est pas un palindrome`
@@ -49,5 +49,7 @@ function checkpal(string) {
 
 
 }
-var pal = checkpal("racecar")
-console.log(pal)
+var palindr = checkpal("racecar")
+console.log(palindr)
+
+
