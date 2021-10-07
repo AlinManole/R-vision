@@ -1,55 +1,87 @@
-// 01 - Alphabet
+// Alphabet
+function sortLetters(str) {
+  var arraySplit = str.split("")
+  console.log(arraySplit)
+  var arraySort = arraySplit.sort()
+  console.log(arraySort)
+  var arrayJoin = arraySplit.join("")
+  console.log(arrayJoin)
+}
 
-function sortLetters(text) {
-    
-    return text.split('').sort().join('');
-};
+sortLetters("konexio")
 
-var text2 = sortLetters("konexio")
-console.log(text2)
+console.log("")
+console.log("")
 
+// XOXO
+function countEach(str) {
+  var xNumber = 0
+  var oNumber = 0
 
-
-//   //02 - XOXO
-
-function countEach(x) {
-
-  var countX = 0
-  var countO = 0
-  for (var i = 0; i < x.length; i++) {
-    if (x[i] === "x") {
-      countX++
-      // console.log(countX)
-    } else if (x[i] === "o") {
-      countO++
-      // console.log(countO)
+  for (var i = 0; i < str.length; i++) {
+    if (str.charAt(i) === "x") { // str[i] === "x"
+      xNumber = xNumber + 1
     }
-  } if (countX === countO) {
-    return true
+
+    if (str.charAt(i) === "o") { // str[i] === "o"
+      oNumber = oNumber + 1
+    }
+  }
+
+  if (xNumber === oNumber) {
+    console.log(true)
   } else {
-    return false
+    console.log(false)
   }
 }
 
-var blabla = countEach("xoxo")
-console.log(blabla)
+countEach("xxxoooox")
+countEach("xox")
 
-// palindrome
+console.log("")
+console.log("")
 
-function checkpal(string) {
-  var palindrome = string.split("")
-  var palindromeOne = palindrome.reverse()
-  var palindromeTwo = palindromeOne.join("")
-  if (palindrome === "") {
-  } else if (string === palindromeTwo) {
-    return "Palindrome !"
+// Palindrome
+function checkPal(str) {
+  console.log(str)
+  var palindrome = str.split("")
+  console.log(palindrome)
+  var palindrome1 = palindrome.reverse()
+  console.log(palindrome1)
+  var palindrome2 = palindrome1.join("")
+  console.log(palindrome2)
+
+  if (str === palindrome2) {
+    return "palindrome"
   } else {
-    return `${palindrome2} n'est pas un palindrome`
+    return "No palindrome"
+  }
+}
+
+var palindrome = checkPal("racecar")
+console.log(palindrome)
+
+console.log("")
+console.log("")
+
+// Swap
+function swap(str) {
+  var result = ""
+
+  for (var i = 0; i < str.length; i++) {
+    var character = str[i]
+
+    if (character === character.toUpperCase()) { // si character est une majuscule
+      result = result + character.toLowerCase()
+    } else {
+      result = result + character.toUpperCase()
+    }
   }
 
-
+  console.log(result)
 }
-var palindr = checkpal("racecar")
-console.log(palindr)
 
+swap("Hello World")
 
+console.log("")
+console.log("")
